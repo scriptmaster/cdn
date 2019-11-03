@@ -30,17 +30,8 @@ header {
     min-height: 100vh;
 
     background-color: #2d3854;
-    background-image: url("patterns/pattern2");
-    /* background: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png"),linear-gradient(#6589cf,#7580cc); */
-    /* background: url("patterns/pattern2"),linear-gradient(#233354,#313555); */
-    background: url("patterns/pattern2"),linear-gradient(#607D8B,#003b56);
-
-    /* background: url(img/bg-pattern1.png),#7b4397;
-    background: url(),linear-gradient(to left,#7b4397,#dc2430); */
-
-    /* background: url(../img/bg-pattern.png),#7b4397;
-    background: url(),linear-gradient(to left,#7b4397,#dc2430); */
-
+    background-image: url("patterns/pattern2.png");
+    background: url("patterns/pattern2.png"),linear-gradient(#607D8B,#003b56);
 }
 
 header nav.my-nav1 {
