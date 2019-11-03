@@ -1,6 +1,8 @@
 # cdn
 https://cdn.jsdelivr.net/gh/scriptmaster/cdn/lib_or_template@version/file.min.css
 
+Add ".min" to any JS/CSS file to get a minified version - if one doesn't exist, jsdelivr'll generate it for you. All generated files come with source maps and can be easily used during development:
+
 Example:
 
 https://cdn.jsdelivr.net/gh/scriptmaster/cdn/matrix-admin/matrix.min.js
