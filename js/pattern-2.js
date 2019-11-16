@@ -1,7 +1,7 @@
 (function(){
 
   let last_known_scroll_position = 0;
-  let ticking = false;
+  let scrollUpdating = false;
 
   var scrollNavColor = '0,0,0';
   var scrollOffsetpx = 30;
@@ -26,12 +26,12 @@
 
   window.addEventListener('scroll', function(e) {
     last_known_scroll_position = window.scrollY;
-    if (!ticking) {
+    if (!scrollUpdating) {
       window.requestAnimationFrame(function() {
         updateHeaderNavByScroll(last_known_scroll_position);
-        ticking = false;
+        scrollUpdating = false;
       });
-      ticking = true;
+      scrollUpdating = true;
     }
   });
 
