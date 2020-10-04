@@ -1,4 +1,4 @@
-const PI = 22 / 7;
+const PI = Math.PI;
 const PI2 = 44 / 7;
 const DEG = PI / 180;
 
