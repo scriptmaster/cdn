@@ -1,6 +1,4 @@
-// NO, NO, we won't use import module or service worker
-// no, we won't - it has lots of disadvantages / very slow productivity..
-// I am not convinced with such bootstrap, so let me do by my style
+// ... ... ... PLEASE HELP IN CONTINOUS FUNDING, INFRASTRUCTURE REQUIREMENTS AND CONNECTED TEAMS
 
 class MSheriff {
     npm = 'https://cdn.jsdelivr.net/npm/';
