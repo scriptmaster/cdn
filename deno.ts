@@ -32,7 +32,7 @@ async function handleRequest(request: Request): Promise<Response> {
     <title>CDN</title>
 
     <meta title="CDN" />
-    <meta description="An SEO Description for CEOs, still if you are seeing this in the search result, then you know that meta tags of open graph for facebook, etc., are not to be ignored too." />
+    <meta description="An SEO Description for CEOs, still if you are seeing in the search results (rather than seeing the page :), then you know that meta tags of open graph for facebook, etc., are not to be ignored too." />
 
     <style type="text/css">/* Inline Style for First Paint */ html { opacity: 0; } body { background: radial-gradient(circle at 50% 50%, rgba(47,51,140,0.8), rgba(0,0,0,0.8)); }</style>
     <link rel="stylesheet" href="/css/difficulture.css" />
