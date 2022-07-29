@@ -1,4 +1,4 @@
-html { font-family: Roboto, Verdana, Garamond, "Trebuchet MS", Georgia, sans-serif, serif, CreateFontGlyphsAndInclude; box-sizing: border-box; font-size: 16px; line-height: 16pt; }
+html { font-family: Roboto, Verdana, Garamond, "Trebuchet MS", Georgia, sans-serif, serif, CreateFontGlyphsAndInclude; box-sizing: border-box; font-size: 16px; line-height: 16pt; opacity: 1; }
 *, *:before, *:after { box-sizing: inherit; }
 body, h1, h2, h3, h4, h5, h6, p, ol, ul { margin: 0; padding: 0; font-weight: normal; }
 ol, ul { list-style: none; }
