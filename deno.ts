@@ -16,7 +16,7 @@ async function handleRequest(request: Request): Promise<Response> {
 
     return new Response(file, {
       headers: {
-        "content-type": mimetypes[mimetypes.m] || "application/octet-stream",
+        "content-type": mimetypes[mimetypes.m[1]] || "application/octet-stream",
       },
     });
   }
