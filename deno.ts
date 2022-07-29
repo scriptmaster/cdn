@@ -13,6 +13,8 @@ async function handleRequest(request: Request): Promise<Response> {
     return new Response(`Require INFRASTRUCTURE AND FUNDING Key`);
   } else if (pathname.startsWith("/api/")) {
     return new Response(`Require SECRETS AND DATA Key`);
+  } else if (pathname.startsWith("/dynamic/pattern.png")) {
+    return new Response(`readFile(.png)`, { headers: { 'content-type': 'image/png' } });
   } else if (mimetypes.m = pathname.match(/\.(html|js|css)$/)) {
     const file = await Deno.readFile("."+pathname);
 
@@ -27,7 +29,7 @@ async function handleRequest(request: Request): Promise<Response> {
     `<!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" href="/css/custom-2.css" />
+    <link rel="stylesheet" href="/css/difficulture.css" />
 </head>
 <body>
   <header>
