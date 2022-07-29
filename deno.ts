@@ -3,19 +3,20 @@ import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
 async function handleRequest(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url);
 
-  // This is how the server works:
-  // 1. A request comes in for a specific asset.
-  // 2. We read the asset from the file system.
-  // 3. We send the asset back to the client.
-
+  const mimetypes = {
+    'css': 'text/css',
+    'js': 'application/javascript',
+    'html': 'text/html',
+  };
+  
   if (pathname == "/upload") {
     return new Response(`Require Key`);
-  } else if (pathname.match(/\.(html|js|css)$/)) {
+  } else if (mimetypes.m = pathname.match(/\.(html|js|css)$/)) {
     const file = await Deno.readFile("."+pathname);
 
     return new Response(file, {
       headers: {
-        "content-type": "application/octet-stream",
+        "content-type": mimetypes[mimetypes.m] || "application/octet-stream",
       },
     });
   }
@@ -23,11 +24,17 @@ async function handleRequest(request: Request): Promise<Response> {
   return new Response(
     `<html>
       <head>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="/css/custom-2.css" />
+        
       </head>
       <body>
         <h1>CDN</h1>
         <form method="post" enctype="multipart/form-data" action="/upload"><input type="file" name="upload-file" /><input type="submit" /></form>
+        
+        <h2>Popular files</h2>
+        <div>
+          Popular: 
+        </div>
       </body>
     </html>`,
     {
