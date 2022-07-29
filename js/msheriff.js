@@ -8,7 +8,7 @@ class MSheriff {
     lib3examples = this.libThree + 'examples/js/';
 
     libs = {
-        'three': this.npm + 'three', // noslash
+        'three': this.npm + 'three',
         'dat.gui': this.npm + 'dat.gui',
         'orbitcontrols': this.lib3examples + 'controls/OrbitControls.min.js',
         'pointercontrols': this.lib3examples + 'controls/PointerControls.min.js',
@@ -26,7 +26,7 @@ class MSheriff {
     importsMax = 0;
     importsPending = 0;
     importLib(libName, callback) {
-        // NO, NO, we won't use import module - no we won't - it has lots of disadvantages / very slow productivity..
+        // We won't use import module - no we won't - it has lots of disadvantages / very slow productivity..
         const libsrc = this.libSrc(libName);
         // console.log(libName, libsrc)
         if(libsrc) {
