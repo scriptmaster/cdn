@@ -30,7 +30,11 @@ async function handleRequest(request: Request): Promise<Response> {
 <html>
 <head>
     <title>CDN</title>
-    <style type="text/css">/*Inline for first paint*/ html { font: 16px Verdana, Roboto, Garamond, CreateFontGlyphsAndImport, sans-serif, serif; box-sizing: border-box; opacity: 0; } body { background: radial-gradient(circle at 50% 50%, rgba(47,51,140,0.8), rgba(0,0,0,0.8)); } ol, ul { list-style: none; } body,h1,h2,h3,h4,h5,h6,p,ol,ul { margin: 0; padding: 0; font-weight: normal; } *, *:before, *:after { box-sizing: inherit; }</style>
+
+    <meta title="CDN" />
+    <meta description="An SEO Description for CEOs, still if you are seeing this in the search result, then you know that meta tags of open graph for facebook, etc., are not to be ignored too." />
+
+    <style type="text/css">/* Inline Style for First Paint */ html { opacity: 0; } body { background: radial-gradient(circle at 50% 50%, rgba(47,51,140,0.8), rgba(0,0,0,0.8)); }</style>
     <link rel="stylesheet" href="/css/difficulture.css" />
 </head>
 <body>
