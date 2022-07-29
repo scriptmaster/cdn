@@ -10,7 +10,9 @@ async function handleRequest(request: Request): Promise<Response> {
   };
   
   if (pathname == "/upload") {
-    return new Response(`Require Key`);
+    return new Response(`Require INFRASTRUCTURE AND FUNDING Key`);
+  } else if (pathname.startsWith("/api/")) {
+    return new Response(`Require SECRETS AND DATA Key`);
   } else if (mimetypes.m = pathname.match(/\.(html|js|css)$/)) {
     const file = await Deno.readFile("."+pathname);
 
@@ -22,23 +24,29 @@ async function handleRequest(request: Request): Promise<Response> {
   }
 
   return new Response(
-    `<html>
-      <head>
-        <link rel="stylesheet" href="/css/custom-2.css" />
-        
-      </head>
-      <body>
-        <main>
-          <h1>CDN</h1>
-          <form method="post" enctype="multipart/form-data" action="/upload"><input type="file" name="upload-file" /><input type="submit" /></form>
-
-          <h2>Popular files</h2>
-          <div>
-            Popular: 
-          </div>
-        </main>
-      </body>
-    </html>`,
+    `<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/custom-2.css" />
+</head>
+<body>
+  <header>
+    <a href="/">CDN</a>
+    <nav>
+      <a href="/data">Data</a>
+      <a href="/login">Login</a>
+    </nav>
+  </header>
+  <main>
+    <h1>CDN</h1>
+    <form method="post" enctype="multipart/form-data" action="/upload"><input type="file" name="upload-file" /><input type="submit" /></form>
+    <h2>Popular files</h2>
+    <div>
+      Popular: 
+    </div>
+  </main>
+</body>
+</html>`,
     {
       headers: {
         "content-type": "text/html; charset=utf-8",
