@@ -28,13 +28,15 @@ async function handleRequest(request: Request): Promise<Response> {
         
       </head>
       <body>
-        <h1>CDN</h1>
-        <form method="post" enctype="multipart/form-data" action="/upload"><input type="file" name="upload-file" /><input type="submit" /></form>
-        
-        <h2>Popular files</h2>
-        <div>
-          Popular: 
-        </div>
+        <main>
+          <h1>CDN</h1>
+          <form method="post" enctype="multipart/form-data" action="/upload"><input type="file" name="upload-file" /><input type="submit" /></form>
+
+          <h2>Popular files</h2>
+          <div>
+            Popular: 
+          </div>
+        </main>
       </body>
     </html>`,
     {
