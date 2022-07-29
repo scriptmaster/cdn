@@ -40,9 +40,11 @@ main {
 header {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
     background-color: rgba(0,0,0,0.25);
     border: 1px solid rgba(0,0,0,0.33);
-    /* background: url("/dynamic/pattern.png"), linear-gradient(#607D8B,#003b56); */
 }
 
 header nav.my-nav1 {
