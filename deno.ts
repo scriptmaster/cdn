@@ -8,7 +8,9 @@ async function handleRequest(request: Request): Promise<Response> {
   // 2. We read the asset from the file system.
   // 3. We send the asset back to the client.
 
-  if (pathname.match(/\.(html|js|css)$/)) {
+  if (pathname == "/upload") {
+    return new Response(`Require Key`);
+  } else if (pathname.match(/\.(html|js|css)$/)) {
     const file = await Deno.readFile("."+pathname);
 
     return new Response(file, {
@@ -25,7 +27,7 @@ async function handleRequest(request: Request): Promise<Response> {
       </head>
       <body>
         <h1>CDN</h1>
-        <form method="post"><input type="upload" name="upload-file" /><input type="submit" /></form>
+        <form method="post" enctype="multipart/form-data" action="/upload"><input type="file" name="upload-file" /><input type="submit" /></form>
       </body>
     </html>`,
     {
