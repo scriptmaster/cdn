@@ -42,7 +42,7 @@ async function handleRequest(request: Request): Promise<Response> {
     <a href="/">CDN</a>
     <nav>
       <a href="/data">Data</a>
-      <a href="https://data.msheriff.com/login">Login</a>
+      <a href="https://data.msheriff.com/auth/ac474a/msh.deno.dev">Login</a>
     </nav>
   </header>
   <main>
