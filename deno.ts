@@ -42,7 +42,7 @@ async function handleRequest(request: Request): Promise<Response> {
     <a href="/">CDN</a>
     <nav>
       <a href="/data">Data</a>
-      <a href="/login">Login</a>
+      <a href="https://data.msheriff.com/login">Login</a>
     </nav>
   </header>
   <main>
@@ -52,6 +52,7 @@ async function handleRequest(request: Request): Promise<Response> {
     <div>
       Popular: 
     </div>
+    <a href="https://data.msheriff.com/">More work here, that you did not see.</a>
   </main>
 </body>
 </html>`,
